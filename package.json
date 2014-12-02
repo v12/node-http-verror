@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "http-verror",
+  "version": "0.0.1",
+  "description": "A simple tool that provides `verror` functionality extended by usable HTTP error codes for Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "mocha --require blanket -R html-cov > coverage.html"
+  },
+  "keywords": [
+    "verror",
+    "error",
+    "handling",
+    "express",
+    "http",
+    "errors"
+  ],
+  "author": "Dr. Evil <dr.evil@krtn.eu>",
+  "license": "GPLv3",
+  "dependencies": {
+    "verror": "^1.6.0"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.0.1"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
+  }
+}

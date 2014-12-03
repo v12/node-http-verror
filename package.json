@@ -4,8 +4,8 @@
   "description": "A simple tool that provides `verror` functionality extended by usable HTTP error codes for Express.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "coverage": "mocha --require blanket -R html-cov > coverage.html"
+    "test": "mocha -R list",
+    "test-cov": "mocha --require blanket -R html-cov > coverage.html"
   },
   "keywords": [
     "verror",

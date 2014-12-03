@@ -16,6 +16,12 @@
     "errors"
   ],
   "author": "Dr. Evil <dr.evil@krtn.eu>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/v12/node-http-verror.git"
+  },
+  "homepage": "https://github.com/v12/node-http-verror",
+  "bugs": "https://github.com/v12/node-http-verror/issues",
   "license": "GPLv3",
   "dependencies": {
     "verror": "^1.6.0"

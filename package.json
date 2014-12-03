@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -R list",
-    "test-cov": "mocha --require blanket -R html-cov > coverage.html"
+    "test-cov": "mocha --require blanket -R html-cov > coverage.html",
+    "test-cov-codeclimate": "mocha --require blanket -R mocha-lcov-reporter > lcov.info"
   },
   "keywords": [
     "verror",
@@ -24,6 +25,7 @@
   "bugs": "https://github.com/v12/node-http-verror/issues",
   "license": "GPLv3",
   "dependencies": {
+    "mocha-lcov-reporter": "0.0.1",
     "verror": "^1.6.0"
   },
   "devDependencies": {

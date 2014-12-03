@@ -9,4 +9,4 @@ addons:
     repo_token: 1658b8996ad1f56b2760ca808fc6a86ffa0024a1996598c36661227d11a2da8b
 
 after_script:
-  - cat lcov.info | codeclimate
+  - npm run test-cov-codeclimate && cat lcov.info | codeclimate

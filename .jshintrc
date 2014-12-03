@@ -1,0 +1,12 @@
+{
+  "boss": true,
+  "node": true,
+  "strict": true,
+  "maxlen": 120,
+  "newcap": false,
+  "undef": true,
+  "unused": true,
+  "lastsemic": true,
+  "indent": 2,
+  "sub": true
+}

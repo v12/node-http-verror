@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -R list",
-    "test-cov": "mocha --require blanket -R html-cov > coverage.html",
-    "test-cov-codeclimate": "mocha --require blanket -R mocha-lcov-reporter > lcov.info"
+    "test-cov": "mocha --require blanket -R html-cov > coverage.html"
   },
   "keywords": [
     "verror",

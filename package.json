@@ -25,10 +25,10 @@
   "bugs": "https://github.com/v12/node-http-verror/issues",
   "license": "GPLv3",
   "dependencies": {
-    "mocha-lcov-reporter": "0.0.1",
     "verror": "^1.6.0"
   },
   "devDependencies": {
+    "mocha-lcov-reporter": "0.0.1",
     "blanket": "^1.1.6",
     "expect.js": "^0.3.1",
     "mocha": "^2.0.1"

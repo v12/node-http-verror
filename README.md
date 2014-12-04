@@ -4,3 +4,43 @@
 
 ## Installation
 ```npm install http-verror --save```
+
+## Usage
+http-verror instance inherits all properties of [WError](https://github.com/davepacheco/node-verror#werror-wrap-layered-errors). In other words, http-verror is a WError but with `statusCode` property being equal to the HTTP status code of the error you created.
+
+### Example
+```javascript
+var errors = require('http-verror');
+
+var err = new errors.Forbidden();
+
+console.log(err.statusCode); // 403
+console.log(err.message); // You're not allowed to perform such action
+
+var err2 = new errors.InternalError(new Error('Some preceding error with internal data'), 'Brief error desc');
+
+console.log(err2.statusCode); // 500
+console.log(err2.message); // Brief error desc
+console.log(err2.cause().message); // Some preceding error with internal data
+console.log(err2.toString()); // HttpError: Brief error desc; caused by Error: Some preceding error with internal data
+```
+
+### Errors
+| Status code | Name                   |
+| :---------: | ---------------------- |
+| 400         | BadRequest             |
+| 401         | Unauthorized           |
+| 402         | PaymentRequired        |
+| 403         | Forbidden              |
+| 404         | NotFound               |
+| 405         | MethodNotAllowed       |
+| 406         | NotAcceptable          |
+| 408         | RequestTimeout         |
+| 409         | Conflict               |
+| 412         | PreconditionFailed     |
+| 415         | UnsupportedMediaType   |
+| 500         | InternalError          |
+| 501         | NotImplemented         |
+| 502         | BadGateway             |
+| 503         | ServiceUnavailable     |
+| 504         | GatewayTimeout         |

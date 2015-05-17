@@ -13,5 +13,7 @@ addons:
 before_script:
   - npm install -g codeclimate-test-reporter
 
+script: npm run ci-test
+
 after_script:
-  - mocha --require blanket -R mocha-lcov-reporter | codeclimate
+  - cat coverage/lcov.info | codeclimate

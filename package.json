@@ -1,11 +1,11 @@
 {
   "name": "http-verror",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple tool that provides `verror` functionality extended by usable HTTP error codes for Express.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R list",
-    "test-cov": "mocha --require blanket -R html-cov > coverage.html"
+    "test": "mocha",
+    "ci-test": "istanbul cover _mocha -- -R tap > result.tap && istanbul report clover"
   },
   "keywords": [
     "verror",
@@ -27,15 +27,8 @@
     "verror": "^1.6.0"
   },
   "devDependencies": {
-    "blanket": "^1.1.6",
     "chai": "^2.3.0",
-    "mocha": "^2.2.4",
-    "mocha-lcov-reporter": "0.0.2"
-  },
-  "config": {
-    "blanket": {
-      "pattern": "lib",
-      "data-cover-never": "node_modules"
-    }
+    "istanbul": "^0.3.14",
+    "mocha": "^2.2.5"
   }
 }

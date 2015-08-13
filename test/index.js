@@ -28,6 +28,15 @@ describe('http-verror', function () {
         expect(e.cause().message).to.equal('test error');
     });
 
+    it('should return Forbidden (403) error with preceding error with default message', function () {
+        var e = new errors.Forbidden(new Error('test error'));
+
+        expect(e.statusCode).to.equal(403);
+        expect(e.message).to.equal('You\'re not allowed to perform such action');
+
+        expect(e.cause().message).to.equal('test error');
+    });
+
     it('should be an instance of HttpError, which is publicly exposed', function () {
         expect(new errors.BadRequest()).to.be.an.instanceof(errors.HttpError);
         expect(new errors.NotFound()).to.be.an.instanceof(errors.HttpError);
